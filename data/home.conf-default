@@ -1,0 +1,39 @@
+# Fill-in your values and rename the file to home.conf
+; debug=0/1
+debug=
+; relays=10,1,20
+relays=
+; relays_defaults=1/0,1/0,1/0 (ping high or low)
+relays_defaults=
+; switches=30,5,40
+switches=
+; switches_defaults=1/0,1/0,1/0 (pin high or low)
+switches_defaults=
+; info=info1,info2,info3
+info=
+; auto_status=1/0,1/0,1/0
+auto_status=
+; intervals=0,3,15 (relay auto trigger in minutes)
+intervals=
+dht_pin=
+; dht_type= (DHT11 or DHT22 or DHT21)
+dht_type=
+; hum_auto=60 (in %)
+hum_auto=
+; reset_timer=0/1
+reset_timer=0
+; door_opener_pos=4 (which relay number: 1-5) (auto_status=0 ; switches_defaults = 0)
+door_opener_pos=0
+; laser_pin_pos=5 (which relay number: 1-5) (auto_status=1 ; switches_defaults = 0)
+laser_pin_pos=
+wifi_ssid=
+wifi_pass=
+; ap_enabled=0/1
+ap_enabled=
+ap_ssid=
+ap_pass=
+ota_host=
+ota_pass=
+; smcd_id=
+; smcd_host=
+; smcd_port=

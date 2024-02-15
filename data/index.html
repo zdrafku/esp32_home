@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>%config.ota_host%</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+			integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<style>
+			html {
+				font-family: Arial;
+				display: inline-block;
+				margin: 0px auto;
+				text-align: center;
+			}
+			h2 { font-size: 3.0rem; }
+			p { font-size: 3.0rem; }
+			.units { font-size: 1.0rem; }
+			.dht-labels {
+				font-size: 1.5rem;
+				vertical-align: middle;
+				padding-bottom: 15px;
+			}
+		</style>
+		<meta http-equiv="refresh" content="10; url = http://%web_ip%">
+	</head>
+	<body>
+		<table align="center">
+			<tr>
+                <td align="right">Uptime: </td>
+                <td align="left" colspan=3>%web_uptime%</td>
+            </tr>
+
+			<tr>
+                <td align="right">SSID: </td>
+                <td align="left" colspan=3>%config.wifi_ssid%</td>
+            </tr>
+			%if_config_ap_enabled%
+			<tr>
+                <td colspan=4>&nbsp;</td>
+            </tr>
+			<tr>
+				<td colspan=2 align="left">
+					<i class="fas fa-thermometer-half" style="color:#059e8a;"></i>
+					<span class="dht-labels">Temperature</span>
+				</td>
+				<td colspan=2 align="left">
+					<span id="temperature">%tepm%</span>
+					<sup class="units">&deg;C</sup>
+				</td>
+			</tr>
+			<tr>
+				<td colspan=2 align="left">
+					<i class="fas fa-tint" style="color:#00add6;"></i>
+					<span class="dht-labels">Humidity</span>
+				</td>
+				<td colspan=2 align="left">
+					<span id="humidity">%hum% %%</span>
+				</td>
+			</tr>
+			<tr><td colspan=4>&nbsp;</td></tr>
+			%relays%
+		</table>
+		%reset_timer%
+		%door_opener%
+	</body>
+</html>
